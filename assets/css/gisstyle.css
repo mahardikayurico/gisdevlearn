@@ -1,0 +1,138 @@
+  /* Reset beberapa gaya default */
+  body,
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Gaya dasar untuk elemen-elemen dashboard */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 200px; /* Lebar sidebar */
+  }
+
+  #map {
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    margin: 20px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1; /* Biarkan konten utama tumbuh sesuai lebar */
+    display: flex;
+  }
+
+  .widget {
+    display: none; /* Sembunyikan semua widget awalnya */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Agar widget bisa memanjang */
+  }
+
+  /* Gaya untuk formulir dan tombol */
+  .form-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  /* Gaya sidebar menu */
+  #sidebar {
+    width: 200px;
+    background-color: #333;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  #sidebar img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  #sidebar a {
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  #sidebar a i {
+    margin-right: 10px; /* Menambahkan ruang antara ikon dan teks */
+  }
+
+  #sidebar a:hover {
+    background-color: #555;
+  }
+
+  /* Konten utama */
+  #content {
+    margin-left: 220px; /* Lebar sidebar + sedikit jarak */
+    padding: 20px;
+  }
+
+  .chart-container {
+    width: 100%;
+    height: 300px; /* Tinggi grafik */
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  /* Gaya header tabel */
+  th {
+    background-color: #f2f2f2;
+  }

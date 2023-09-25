@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGIS Search Location</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Tambahkan link ke Font Awesome versi 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./assets//css/gisstyle.css">
+  </link>
+  </head>
+  <body>
+    <header id="sidebar">
+      <img src="./assets/img/" alt="Lokasi Gambar" />
+      <a href="#webgis" onclick="showContent('webgis')"
+        ><i class="fas fa-globe"></i> WebGIS</a
+      >
+      <a href="#dashboard" onclick="showContent('dashboard')"
+        ><i class="fas fa-chart-bar"></i> Dashboard</a
+      >
+      <a href="#data" onclick="showContent('data')"
+        ><i class="fas fa-table"></i> Data</a
+      >
+    </header>
+    <div class="container" id="content">
+      <div class="widget" id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="chart-container">
+          <canvas id="lineChart"></canvas>
+        </div>
+      </div>
+      <div class="widget" id="webgis" style="display: block">
+        <h2>WebGIS</h2>
+        <div id="map"></div>
+        <div class="form-container">
+          <form id="coordinate-form">
+            <label for="x-coordinate">Koordinat X:</label>
+            <input
+              type="text"
+              id="x-coordinate"
+              name="x-coordinate"
+              placeholder="Masukkan Koordinat X"
+              required
+            />
+            <label for="y-coordinate">Koordinat Y:</label>
+            <input
+              type="text"
+              id="y-coordinate"
+              name="y-coordinate"
+              placeholder="Masukkan Koordinat Y"
+              required
+            />
+            <button type="submit" class="button">Tampilkan Marker</button>
+          </form>
+        </div>
+      </div>
+      <div class="widget" id="data">
+        <h2 style="margin-bottom: 2rem;">Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nama Provinsi</th>
+              <th>Jumlah Penduduk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jawa Barat</td>
+              <td>48,000,000</td>
+            </tr>
+            <tr>
+              <td>Jawa Tengah</td>
+              <td>33,000,000</td>
+            </tr>
+            <!-- Tambahkan baris data provinsi lainnya di sini -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sertakan perpustakaan JavaScript Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="./assets/js/getMaps.js"></script>
+  </body>
+</html>
